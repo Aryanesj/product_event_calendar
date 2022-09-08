@@ -3,3 +3,5 @@
 ОСОБЕННОСТИ ВЫПОЛНЕНИЯ: Задание Выполнено полностью, все компоненты разработаны вручную без использования готовых реализаций для ключевых компонентов. ПОЛНАЯ ЭМУЛЯЦИЯ РАБОТЫ С АПИ (работа с данными из localStorage только в реализации АПИ).
 
 ТЕХНОЛОГИИ: classnames,  date-fns, formik, react, redux-toolkit, sass, typescript, uuid, yup, eslint, prettier.
+
+preview: https://phenomenal-sundae-3d8fa6.netlify.app
