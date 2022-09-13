@@ -3,6 +3,7 @@ import { endOfDay, startOfDay } from 'date-fns';
 import { EventItemData } from '../../../api/events/types';
 import { api } from '../../../api';
 import { RootState } from '../../../store/types';
+import { EVENTS_SELECTED_DATE_LS_KEY } from '../../../config/api';
 import { SLICE_NAME } from './types';
 import { actions } from './slice';
 import { getDatesOfSelectedIntervalHelper } from './helpers';
@@ -14,6 +15,7 @@ interface FetchEventListPayload {
 export const fetchEventListThunk = createAsyncThunk(
   `${SLICE_NAME}/fetchEventList`,
   async ({ selectedDate }: FetchEventListPayload, { dispatch }) => {
+    localStorage.setItem(EVENTS_SELECTED_DATE_LS_KEY, selectedDate.toString());
     const datesOfSelectedInterval =
       getDatesOfSelectedIntervalHelper(selectedDate);
     dispatch(actions.setSelectedDate({ selectedDate }));
